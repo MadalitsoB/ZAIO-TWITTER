@@ -3,59 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X clone</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <img src="images - Copy.png" alt="X icon" width="50" height="50" />
-      <hr />
-      <aside>
-        <ul>
-          <li>
-            <img
-              src="home.png
-            "
-              alt="Home"
-              width="20"
-              height="20"
-            />
-            Home
-          </li>
-          <li>
-            <img src="explore.png" alt="Explore" width="20" height="20" />
-            Explore
-          </li>
-          <li>
-            <img
-              src="notifications.png"
-              alt="Notifications"
-              width="20"
-              height="20"
-            />
-            Notifications
-          </li>
-          <li>
-            <img src="chat.png" alt="Chat" width="20" height="20" />
-            Chat
-          </li>
-          <li>
-            <img src="grok--v2.png" alt="Grok" width="20" height="20" />
-            Grok
-          </li>
-          <li>
-            <img src="premium.png" alt="Premium" width="20" height="20" />
-            Premium
-          </li>
-          <li>
-            <img src="profile.png" alt="Profile" width="20" height="20" />
-            Profile
-          </li>
-          <li>
-            <img src="more.png" alt="More" width="20" height="20" />
-            More
-          </li>
-        </ul>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="images - Copy.png" alt="X logo" height="50" width="50" />
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#">
+                <img src="home.png" alt="Home" width="50" height="50" />
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="explore.png" alt="Explore" width="50" height="50" />
+                <span>Explore</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img
+                  src="notification.png"
+                  alt="Notifications"
+                  width="50"
+                  height="50"
+                />
+                <span>Notifications</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="chat icon.png" alt="Chat" width="50" height="50" />
+                <span>Chat</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <img src="grok--v2.png" alt="Grok" width="50" height="50" />
+                <span>Grok</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="tick icon.png" alt="Premuim" width="50" height="50" />
+                <span>Premuim</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="profile icon.png"
+                  alt="Profile"
+                  width="50"
+                  height="50"
+                />
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="more.png" alt="More" width="50" height="50" />
+                <span>More</span>
+              </a>
+            </li>
+            <li>
+              <button class="post-button" type="button">Post</button>
+            </li>
+          </ul>
+        </nav>
       </aside>
-    </nav>
+
+      <main class="timeline">
+        <div class="button-container">
+          <button>For you</button>
+          <button>Following</button>
+        </div>
+        <input
+          type="text"
+          placeholder="What's happening?"
+          class="tweet-input"
+      </main>
+
+      <aside class="trending">
+        <h1>Trending</h1>
+      </aside>
+    </div>
   </body>
 </html>

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #e6ecf0;
+}
+
+.timeline {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #e6ecf0;
+}
+
+.trending {
+  width: 320px;
+  padding: 20px;
+}
+
+.post-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #1da1f2;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+}
