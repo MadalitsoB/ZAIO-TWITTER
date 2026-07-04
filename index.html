@@ -3,101 +3,297 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FakeTwitter HQ</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="app-shell">
       <aside class="sidebar">
-        <div class="logo">
-          <img src="images - Copy.png" alt="X logo" height="50" width="50" />
-        </div>
+        <a class="brand" href="#">
+          <img src="images - Copy.png" alt="X logo" />
+        </a>
 
-        <nav>
-          <ul>
-            <li>
-              <a href="#">
-                <img src="home.png" alt="Home" width="50" height="50" />
-                <span>Home</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <img src="explore.png" alt="Explore" width="50" height="50" />
-                <span>Explore</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <img
-                  src="notification.png"
-                  alt="Notifications"
-                  width="50"
-                  height="50"
-                />
-                <span>Notifications</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <img src="chat icon.png" alt="Chat" width="50" height="50" />
-                <span>Chat</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#">
-                <img src="grok--v2.png" alt="Grok" width="50" height="50" />
-                <span>Grok</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="tick icon.png" alt="Premuim" width="50" height="50" />
-                <span>Premuim</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="profile icon.png"
-                  alt="Profile"
-                  width="50"
-                  height="50"
-                />
-                <span>Profile</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="more.png" alt="More" width="50" height="50" />
-                <span>More</span>
-              </a>
-            </li>
-            <li>
-              <button class="post-button" type="button">Post</button>
-            </li>
-          </ul>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#" class="nav-item active">
+            <img src="home.png" alt="Home" />
+            <span>Home</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="explore.png" alt="Explore" />
+            <span>Explore</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="notification.png" alt="Notifications" />
+            <span>Notifications</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="chat icon.png" alt="Messages" />
+            <span>Messages</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="grok--v2.png" alt="Grok" />
+            <span>Grok</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="tick icon.png" alt="Premium" />
+            <span>Premium</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-dot">●</span>
+            <span>Profile</span>
+          </a>
+          <a href="#" class="nav-item">
+            <img src="more.png" alt="More" />
+            <span>More</span>
+          </a>
         </nav>
+
+        <button class="post-btn" id="openComposer" type="button">Post</button>
+
+        <div class="profile-card">
+          <img
+            class="avatar small"
+            src="Blessing Marakalla.png"
+            alt="Blessing Marakalla"
+          />
+          <div>
+            <strong>Blessing Marakalla</strong>
+            <p>@blessingm</p>
+          </div>
+        </div>
       </aside>
 
       <main class="timeline">
-        <div class="button-container">
-          <button>For you</button>
-          <button>Following</button>
-        </div>
-        <input
-          type="text"
-          placeholder="What's happening?"
-          class="tweet-input"
+        <header class="top-bar">
+          <div>
+            <h1>Home</h1>
+            <p>Mocking up the internet one tweet at a time.</p>
+          </div>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+        </header>
+
+        <section class="composer-card">
+          <div class="composer-row">
+            <img
+              class="avatar"
+              src="Blessing Marakalla.png"
+              alt="Blessing Marakalla"
+            />
+            <textarea id="tweetText" placeholder="What's happening?"></textarea>
+          </div>
+          <div class="composer-actions">
+            <div class="composer-tools">
+              <span>📷</span>
+              <span>📍</span>
+              <span>🎯</span>
+            </div>
+            <button class="post-btn small" id="submitTweet" type="button">
+              Post
+            </button>
+          </div>
+        </section>
+
+        <section class="feed" id="feed">
+          <article class="post-card">
+            <div class="post-header">
+              <img class="avatar" src="Karabo Komane.png" alt="Karabo Komane" />
+              <div>
+                <strong>Karabo Komane</strong>
+                <p>@karabo · 2h</p>
+              </div>
+            </div>
+            <p>
+              Making the timeline feel alive with fresh ideas and bold visuals.
+            </p>
+            <div class="post-stats">💬 14 • 🔁 4 • ❤️ 29</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img
+                class="avatar alt"
+                src="Emily Maramani.png"
+                alt="Emily Maramani"
+              />
+              <div>
+                <strong>Emily Maramani</strong>
+                <p>@emily · 5h</p>
+              </div>
+            </div>
+            <p>
+              Designing for people first, even when the layout gets a bit spicy.
+            </p>
+            <div class="post-stats">💬 9 • 🔁 2 • ❤️ 18</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img
+                class="avatar"
+                src="Masentle Dlamini.png"
+                alt="Masentle Dlamini"
+              />
+              <div>
+                <strong>Masentle Dlamini</strong>
+                <p>@masentle · 8h</p>
+              </div>
+            </div>
+            <p>
+              Nothing beats a clean feed and a little bit of creative chaos.
+            </p>
+            <div class="post-stats">💬 7 • 🔁 1 • ❤️ 12</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img
+                class="avatar alt"
+                src="Nonku Maphanga.png"
+                alt="Nonku Maphanga"
+              />
+              <div>
+                <strong>Nonku Maphanga</strong>
+                <p>@nonku · 10h</p>
+              </div>
+            </div>
+            <p>
+              Building a home page that feels like a real conversation and not
+              just a mockup.
+            </p>
+            <div class="post-stats">💬 6 • 🔁 3 • ❤️ 15</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img class="avatar" src="Dido Deed.png" alt="Dido Deed" />
+              <div>
+                <strong>Dido Deed</strong>
+                <p>@dido · 12h</p>
+              </div>
+            </div>
+            <p>
+              Small details make the big difference when the whole page comes
+              together.
+            </p>
+            <div class="post-stats">💬 4 • 🔁 1 • ❤️ 9</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img class="avatar alt" src="Bea Bae.png" alt="Bea Bae" />
+              <div>
+                <strong>Bea Bae</strong>
+                <p>@beabae · 14h</p>
+              </div>
+            </div>
+            <p>
+              Every timeline needs a little personality, a little rhythm, and a
+              lot of heart.
+            </p>
+            <div class="post-stats">💬 5 • 🔁 2 • ❤️ 11</div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-header">
+              <img class="avatar" src="Enny Tee.png" alt="Enny Tee" />
+              <div>
+                <strong>Enny Tee</strong>
+                <p>@ennytee · 16h</p>
+              </div>
+            </div>
+            <p>
+              Fresh UI, warm vibes, and a feed that looks ready for real
+              engagement.
+            </p>
+            <div class="post-stats">💬 3 • 🔁 1 • ❤️ 7</div>
+          </article>
+        </section>
       </main>
 
-      <aside class="trending">
-        <h1>Trending</h1>
+      <aside class="right-rail">
+        <div class="search-card">
+          <input type="search" placeholder="Search" />
+        </div>
+
+        <section class="card">
+          <h2>Trending now</h2>
+          <ul class="trend-list">
+            <li><span>#BuildInPublic</span><small>12.4K posts</small></li>
+            <li><span>#CSSMagic</span><small>8.1K posts</small></li>
+            <li><span>#NoSleepCode</span><small>3.2K posts</small></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Who to follow</h2>
+          <div class="follow-row">
+            <img
+              class="avatar small"
+              src="Karabo Komane.png"
+              alt="Karabo Komane"
+            />
+            <div>
+              <strong>Karabo Komane</strong>
+              <p>@karabo</p>
+            </div>
+            <button type="button">Follow</button>
+          </div>
+          <div class="follow-row">
+            <img
+              class="avatar small alt"
+              src="Emily Maramani.png"
+              alt="Emily Maramani"
+            />
+            <div>
+              <strong>Emily Maramani</strong>
+              <p>@emily</p>
+            </div>
+            <button type="button">Follow</button>
+          </div>
+          <div class="follow-row">
+            <img class="avatar small" src="Bea Bae.png" alt="Bea Bae" />
+            <div>
+              <strong>Bea Bae</strong>
+              <p>@beabae</p>
+            </div>
+            <button type="button">Follow</button>
+          </div>
+        </section>
       </aside>
     </div>
+
+    <div class="modal" id="composerModal" hidden>
+      <div class="modal-content">
+        <button
+          class="close-modal"
+          id="closeModal"
+          type="button"
+          aria-label="Close composer"
+        >
+          ×
+        </button>
+        <h2>Compose a new post</h2>
+        <textarea id="modalText" placeholder="What is happening?"></textarea>
+        <div class="composer-actions">
+          <div class="composer-tools">
+            <span>📷</span>
+            <span>📍</span>
+            <span>🎯</span>
+          </div>
+          <button class="post-btn small" id="submitModalTweet" type="button">
+            Post
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
